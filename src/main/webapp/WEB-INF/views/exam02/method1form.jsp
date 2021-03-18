@@ -1,51 +1,22 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Spring</title>
-		<!--application: ServletContext 객체(웹 애플리케이션 실행 정보를 가지고 있는 객체) 참조  -->
-		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/bootstrap-4.6.0/css/bootstrap.min.css">
-		<script src="<%=application.getContextPath()%>/resources/js/jquery-3.5.1.min.js"></script>
-		<script src="${pageContext.request.contextPath}/resources/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
-		<script src="<%=pageContext.getRequest().getServletContext().getContextPath()%>/resources/bootstrap-4.6.0/js/bootstrap.min.js"></script>
-	</head>
-  <body>
-    <div class="d-flex flex-column vh-100">
-     <%-- 헤더 부분 --%>
-	<%@ include file="/WEB-INF/views/common/header.jsp" %>
-      <div class="flex-grow-1 container-fluid">
-        <div class="row h-100">
-          <div class="col-md-4 p-3 bg-dark">
-            <div class="h-100 d-flex flex-column">
-              <div class="flex-grow-1" style="height:0px; overflow-y: auto; overflow-x: hidden;">
-                <%-- 메뉴 부분 --%>
-                <%@ include file="/WEB-INF/views/common/menu.jsp" %>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-8 p-3">
-            <div class=" h-100 d-flex flex-column">
-              <div class="flex-grow-1 overflow-auto pr-3" style="height:0px">
-	              <div>
-	                <%-- 메뉴 내용 부분 --%>
-	                mehtod1form.jsp
-	                <hr>
-	                <form method="post" action="method1">
-	                	<div class="form-group">
-	                		<label for="name">이름</label>
-	                		<input id="name" type="text" name="name" class="form-group"/>
-	                	</div>
-	                	<input type="submit" class="btn btn-success">
-	                </form>
-              	</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+<%@ include file="/WEB-INF/views/common/header.jsp" %>
+<%-- 메뉴 내용 부분 --%>
+<div>
+  mehtod1form.jsp
+  <hr>
+ <!-- 여기 action이 함수이름인지 Requestmapping주소인지 jsp주소인지 -->
+  <!-- Requestmapping주소 -->
+  <%-- <%=application.getContextPath()%>/exam02/method1 --%>
+  <!-- method1  둘 다 가능-->
+  <form method="post" action="method1">
+  	<div class="form-group">
+  		<label for="name">이름</label>
+  		<input id="name" type="text" name="name" class="form-control"/>
+  	</div>
+  	<input type="submit" class="btn btn-success">
+  </form>
+</div>
+<%-- 메뉴 내용 부분 --%>
+<%@ include file="/WEB-INF/views/common/footer.jsp" %>
