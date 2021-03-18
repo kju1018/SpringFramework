@@ -3,6 +3,7 @@
 
 <%@ include file="/WEB-INF/views/common/header.jsp" %>
 <div>
+	<!-- user는 클래스명 -->
   	uid: ${user.uid} <br/>
   	uname: ${user.uname} <br/>
   	upassword: ${user.upassword}<br/>
