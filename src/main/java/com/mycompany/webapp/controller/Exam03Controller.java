@@ -26,7 +26,7 @@ public class Exam03Controller {
 			request.setAttribute("kind", kind);
 			request.setAttribute("pageNo", pageNo);
 			
-			return "exam03/method1";
+			return "exam03/method1";  test
 		}*/
 	
 	@GetMapping("/method1")
