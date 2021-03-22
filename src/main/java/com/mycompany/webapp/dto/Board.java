@@ -1,11 +1,17 @@
 package com.mycompany.webapp.dto;
 
+import java.util.Date;
+
 public class Board {
 	private int bno;
 	private String btitle;
 	private String bcontent;
 	private String bwriter;
-	
+	private Date bdate;
+	private int bhitcount;
+	private String battachoname;
+	private String battachsname;
+	private String battachtype;
 	public int getBno() {
 		return bno;
 	}
@@ -30,4 +36,36 @@ public class Board {
 	public void setBwriter(String bwriter) {
 		this.bwriter = bwriter;
 	}
+	public Date getBdate() {
+		return bdate;
+	}
+	public void setBdate(Date bdate) {
+		this.bdate = bdate;
+	}
+	public int getBhitcount() {
+		return bhitcount;
+	}
+	public void setBhitcount(int bhitcount) {
+		this.bhitcount = bhitcount;
+	}
+	public String getBattachoname() {
+		return battachoname;
+	}
+	public void setBattachoname(String battachoname) {
+		this.battachoname = battachoname;
+	}
+	public String getBattachsname() {
+		return battachsname;
+	}
+	public void setBattachsname(String battachsname) {
+		this.battachsname = battachsname;
+	}
+	public String getBattachtype() {
+		return battachtype;
+	}
+	public void setBattachtype(String battachtype) {
+		this.battachtype = battachtype;
+	}
+	
+	
 }

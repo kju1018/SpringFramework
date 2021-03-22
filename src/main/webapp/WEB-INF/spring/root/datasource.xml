@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!--DB 연결 설정 및 커넥션 풀 설정 -->
+	<!-- datasource파일은 커넥션 풀을 설정하는 파일 -->
+	
+	<!--설정 파일에서의 bean은 관리 객체  root에서 관리하는 객체-->
+	<bean 	id="dataSource" 
+			class="org.apache.commons.dbcp2.BasicDataSource"
+			destroy-method="close">
+	<!-- id는 org.apache.commons.dbcp2.BasicDataSource 이 객체를 찾아올때 -->
+	<!-- id를 안주면 BasicDataSource의 첫자를 소문자로 해서 관리가 됨 즉 basicDataSource -->
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
+		<property name="url" value="jdbc:oracle:thin:@106.253.56.122:1521:orcl"></property>
+		<property name="username" value="user20"></property>
+		<property name="password" value="12345"></property>
+		<property name="initialSize" value="2"></property>
+		<property name="maxTotal" value="5"></property>
+		<property name="maxIdle" value="2"></property>
+	</bean>
+	
+	<!-- MyBatis -->
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation" value="/WEB-INF/mybatis/mapper-config.xml"/>
+		<property name="mapperLocations" value="/WEB-INF/mybatis/mapper/*.xml"/>
+	</bean>
+	
+</beans>

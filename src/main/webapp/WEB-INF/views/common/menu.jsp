@@ -23,5 +23,9 @@
 	<a class="nav-link text-warning" href="<%=application.getContextPath()%>/exam03/content">
 		요청 파라미터 받기
 	</a>
+	
+	<a class="nav-link text-warning" href="<%=application.getContextPath()%>/exam04/content">
+		DB 연동
+	</a>
   </li>
 </ul>
