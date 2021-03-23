@@ -8,22 +8,22 @@
   <hr/>
   
   <h6 class="mt-3">폼을 이용해서 파라미터 전달</h6><hr/>
-  <form method="post" action="method2">
-  <div class="form-group">
-    <label for="uemail">Email address</label>
-    <input type="email" class="form-control" id="uemail" name="uemail" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="upassword">Password</label>
-    <input type="password" class="form-control" id="upassword" name="upassword">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="upublic" name="upublic">
-    <label class="form-check-label" for="public">공개</label>
-  </div>
-  <button type="submit" class="btn btn-primary">로그인</button>
-</form>
+ 	<form method="post" action="method2">
+		  <div class="form-group">
+		    <label for="uemail">Email address</label>
+		    <input type="email" class="form-control" id="uemail" name="uemail" aria-describedby="emailHelp">
+		    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+		  </div>
+		  <div class="form-group">
+		    <label for="upassword">Password</label>
+		    <input type="password" class="form-control" id="upassword" name="upassword">
+		  </div>
+		  <div class="form-group form-check">
+		    <input type="checkbox" class="form-check-input" id="upublic" name="upublic">
+		    <label class="form-check-label" for="public">공개</label>
+		  </div>
+		  <button type="submit" class="btn btn-primary">로그인</button>
+	</form>
 
 <hr/>
 

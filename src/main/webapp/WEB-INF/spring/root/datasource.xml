@@ -23,10 +23,14 @@
 	</bean>
 	
 	<!-- MyBatis -->
-	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="configLocation" value="/WEB-INF/mybatis/mapper-config.xml"/>
 		<property name="mapperLocations" value="/WEB-INF/mybatis/mapper/*.xml"/>
+	</bean>
+	
+	<bean id="sqlSesstionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory"/>		
 	</bean>
 	
 </beans>
