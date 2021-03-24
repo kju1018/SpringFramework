@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--xml파일을 식별할 수 있는 이름 -->
-<mapper namespace="boards">
+<mapper namespace="com.mycompany.webapp.dao.BoardsDao">
 	<!--select문을 식별할 수 있는 이름 -->
 	<select id="selectAll" resultType="board">
 		select bno, btitle, bwriter, bdate, bhitcount
@@ -25,11 +25,22 @@
 	</select>
 	
 	<insert id="insert" parameterType="board">
-		insert into boards
-		(bno, btitle, bcontent, bwriter, bdate, bhitcount)
-		values
-		(seq_boards_bno.nextval, #{btitle}, #{bcontent}, #{bwriter}, sysdate, 0)
-		<!--bno는 getBno() 와 같음  -->
+		<if test="battachoname == null">
+			insert into boards
+			(bno, btitle, bcontent, bwriter, bdate, bhitcount)
+			values
+			(seq_boards_bno.nextval, #{btitle}, #{bcontent}, #{bwriter}, sysdate, 0)
+			<!--bno는 getBno() 와 같음  -->
+		</if>
+		
+		<if test="battachoname != null">
+			insert into boards
+			(bno, btitle, bcontent, bwriter, bdate, bhitcount, battachoname, battachsname, battachtype)
+			values
+			(seq_boards_bno.nextval, #{btitle}, #{bcontent}, #{bwriter}, sysdate, 0, #{battachoname}, #{battachsname}, #{battachtype})
+			<!--bno는 getBno() 와 같음  -->
+		</if>
+		
 	</insert>
 	
 	<select id="selectByBno" parameterType="int" resultType="board">
@@ -47,7 +58,7 @@
 		where bno=#{bno}
 	</update>
 	
-	<delete id="deleteByBno" parameterType="int">
+	<delete id="delete" parameterType="int">
 		delete from boards
 		where bno=#{bno}
 	</delete>
