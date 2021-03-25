@@ -35,7 +35,7 @@
 			</c:forEach>
 			
 			<tr>
-				<td colspan="5" style="text-center">
+				<td colspan="5" class="text-center">
 				<!--[처음][이전] 1 2 3 4 5 [다음][맨끝] -->
 				<a class="btn btn-outline-primary btn-sm"
 				href="list?pageNo=1">처음</a>
@@ -64,7 +64,6 @@
 				href="list?pageNo=${pager.totalPageNo}">맨끝</a>
 				</td>
 			</tr>
-			
 			
 		</table> 
 	</div>

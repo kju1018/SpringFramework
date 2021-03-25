@@ -38,6 +38,15 @@
 		</div>
 		
 		<div>
+		<div class="mb-1">첨부</div>
+			<a href="downloadAttach?bno=${board.bno}">
+				<c:if test="${board.battachoname != null}">
+					<img src="downloadAttach?bno=${board.bno}" width="200"/>
+				</c:if>
+			</a>	
+		</div>
+		
+		<div>
 			<a class="btn btn-primary btn-sm" href="list">목록</a>
 			<a class="btn btn-danger btn-sm" href="updateForm?bno=${board.bno}">수정</a>
 			<a class="btn btn-danger btn-sm" href="delete?bno=${board.bno}">삭제(D)</a>

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 
 <ul class="nav flex-column">
-  <li class="nav-item">
+  <li class="nav-item mb-2">
     <h6 class="text-white">Controller</h6>
     <!--href안에 값들은 Controller의 RequestMapping안의 주소  -->
     <a class="nav-link text-warning" href="<%=application.getContextPath()%>">
@@ -23,9 +23,19 @@
 	<a class="nav-link text-warning" href="<%=application.getContextPath()%>/exam03/content">
 		요청 파라미터 받기
 	</a>
-	
-	<a class="nav-link text-warning" href="<%=application.getContextPath()%>/exam04/content">
-		DB 연동
-	</a>
+  </li>
+  
+  <li class="nav-item mb-2">
+    <h6 class="text-white">DB연동</h6>
+	    <a class="nav-link text-warning" href="<%=application.getContextPath()%>/exam04/content">
+			게시판
+		</a>
+  </li>
+  
+   <li class="nav-item mb-2">
+    <h6 class="text-white">AJAX 연동</h6>
+		<a class="nav-link text-warning" href="<%=application.getContextPath()%>/exam05/content">
+			게시판	
+		</a>
   </li>
 </ul>
