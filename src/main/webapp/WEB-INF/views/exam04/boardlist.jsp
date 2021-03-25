@@ -18,7 +18,6 @@
 				<th>번호</th>
 				<th>제목</th>
 				<th>내용</th>
-				<th>글쓴이</th>
 				<th>날짜</th>
 				<th>조회수</th>
 			</tr>
@@ -28,8 +27,8 @@
 					<td>${board.bno}</td>
 					<!--read?bno= {} bno는 파라미터 이름 Controller에서 바로 받음  -->
 					<td><a href="read?bno=${board.bno}">${board.btitle}</a></td>
-					<td>${board.bcontent}</td>
 					<td>${board.bwriter}</td>
+					<td>${board.bcontent}</td>					
 					<td><fmt:formatDate value="${board.bdate}" pattern="yyyy-MM-dd"/></td>
 					<td>${board.bhitcount}</td>
 				</tr>
