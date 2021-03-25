@@ -48,8 +48,10 @@
 		
 		<div>
 			<a class="btn btn-primary btn-sm" href="list">목록</a>
-			<a class="btn btn-danger btn-sm" href="updateForm?bno=${board.bno}">수정</a>
-			<a class="btn btn-danger btn-sm" href="delete?bno=${board.bno}">삭제(D)</a>
+			<c:if test="${loginUid == board.bwriter}">
+				<a class="btn btn-danger btn-sm" href="updateForm?bno=${board.bno}">수정</a>
+				<a class="btn btn-danger btn-sm" href="delete?bno=${board.bno}">삭제(D)</a>
+			</c:if>
 		</div>
 	</div>
  <%@ include file="/WEB-INF/views/common/footer.jsp" %>           	

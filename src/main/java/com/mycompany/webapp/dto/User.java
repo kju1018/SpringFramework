@@ -4,6 +4,8 @@ public class User {
 	private String uid;
 	private String uname;
 	private String upassword;
+	private String uauthority;
+	private int uenabled;
 	private String[] uhobby;
 	//꼭 배열로 해야함
 	private String ujob;
@@ -38,6 +40,16 @@ public class User {
 	public void setUjob(String ujob) {
 		this.ujob = ujob;
 	}
-	
-	
+	public String getUauthority() {
+		return uauthority;
+	}
+	public void setUauthority(String uauthority) {
+		this.uauthority = uauthority;
+	}
+	public int getUenabled() {
+		return uenabled;
+	}
+	public void setUenabled(int uenabled) {
+		this.uenabled = uenabled;
+	}
 }
