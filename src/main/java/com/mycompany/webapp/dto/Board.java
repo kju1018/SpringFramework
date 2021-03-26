@@ -6,9 +6,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class Board {
 	private int bno;
-	private String btitle;
-	private String bcontent;
-	private String bwriter;
+	private String bTitle;
+	private String bContent;
+	private String bWriter;
 	private Date bdate;
 	private int bhitcount;
 	private MultipartFile battach;
@@ -22,22 +22,22 @@ public class Board {
 		this.bno = bno;
 	}
 	public String getBtitle() {
-		return btitle;
+		return bTitle;
 	}
 	public void setBtitle(String btitle) {
-		this.btitle = btitle;
+		this.bTitle = btitle;
 	}
 	public String getBcontent() {
-		return bcontent;
+		return bContent;
 	}
 	public void setBcontent(String bcontent) {
-		this.bcontent = bcontent;
+		this.bContent = bcontent;
 	}
 	public String getBwriter() {
-		return bwriter;
+		return bWriter;
 	}
 	public void setBwriter(String bwriter) {
-		this.bwriter = bwriter;
+		this.bWriter = bwriter;
 	}
 	public Date getBdate() {
 		return bdate;

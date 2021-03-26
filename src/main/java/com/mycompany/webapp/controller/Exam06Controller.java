@@ -88,6 +88,7 @@ public class Exam06Controller {
 	public String sessionSaveObject(HttpSession session) {
 		User user = new User();
 		user.setUid("spring");
+		user.setUname("test");
 		session.setAttribute("user", user);
 		return "redirect:/exam06/content";
 	}
@@ -97,6 +98,7 @@ public class Exam06Controller {
 		User user = (User) session.getAttribute("user");
 		if(user != null) {
 			logger.info("저장된 uid: " + user.getUid());
+			logger.info("저장된 uid: " + user.getUname());
 		}
 	
 		return "redirect:/exam06/content";
