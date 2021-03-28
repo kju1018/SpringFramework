@@ -8,5 +8,7 @@
 			<typeAlias type="com.mycompany.webapp.dto.Pager" alias="pager"/>
 			
 			<typeAlias type="com.mycompany.webapp.dto.User" alias="user"/>
+			
+			<typeAlias type="com.mycompany.webapp.dto.Order" alias="order"/>
 		</typeAliases>
 </configuration>

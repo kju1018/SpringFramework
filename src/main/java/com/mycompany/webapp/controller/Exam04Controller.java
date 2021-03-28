@@ -141,9 +141,10 @@ public class Exam04Controller {
 	}
 
 	@GetMapping("/read")
-	public String read(int bno, Model model) {
-		boardsService.addHitcount(bno);
-		Board board = boardsService.getBoard(bno);
+	public String read(Board readBoard, Model model) {
+		boardsService.addHitcount(readBoard.getBno());
+		Board board = boardsService.getBoard(readBoard.getBno());
+		logger.info("객체"+readBoard.getBtitle());
 		model.addAttribute("board", board);
 		return "/exam04/read";
 	}

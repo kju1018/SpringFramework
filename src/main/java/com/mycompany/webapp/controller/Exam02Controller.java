@@ -23,7 +23,7 @@ public class Exam02Controller {
 
 	@RequestMapping("/method1")
 	public String method1(HttpServletRequest request, HttpServletResponse response) {
-		logger.info("실행");
+		logger.info("실행 여기임");
 		// post man에서 http://localhost:8080/webapp/exam02/method1?name=홍길동 로 보냄
 		String name = request.getParameter("name");
 		logger.info(name);

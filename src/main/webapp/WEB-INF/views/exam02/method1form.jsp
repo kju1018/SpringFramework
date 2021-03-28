@@ -11,6 +11,7 @@
   <%-- <%=application.getContextPath()%>/exam02/method1 --%>
   <!-- method1  둘 다 가능-->
   <form method="post" action="method1">
+  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
   	<div class="form-group">
   		<label for="name">이름</label>
   		<input id="name" type="text" name="name" class="form-control"/>

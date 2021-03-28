@@ -38,7 +38,7 @@
 							 <!-- 이건 security에서 이미 잡아놓음 -->
 							 <!-- authentication-failure-forward-url 얘는 서버에서 해주는것 -->
 							 <!-- authentication-failure-url 이건 재요청( 리다이렉트 ) -->
-		<!-- <security:csrf disabled="true"/> -->
+		<!-- <security:csrf disabled="true"/> --> 
 		
 		<!-- 스프링 시큐리티가 기본적으로 사용한 로그아웃 경로, POST 방식으로 요청해야함 -->
 		<security:logout logout-url="/logout"/>

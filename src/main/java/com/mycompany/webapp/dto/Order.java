@@ -1,5 +1,6 @@
 package com.mycompany.webapp.dto;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class Order {
@@ -7,11 +8,14 @@ public class Order {
 	private String uid;
 	private String oAddress;
 	private String oReceiver;
-	private int oNumber;
+	private String oNumber;
 	private String oMessage;
 	private String oMethod;
 	private Date oDate;
 	private String oState;
+	private int oZipcode;
+	private String oAccountInfo;
+	private String oDepositor;
 	public int getOrderNo() {
 		return orderNo;
 	}
@@ -36,10 +40,10 @@ public class Order {
 	public void setoReceiver(String oReceiver) {
 		this.oReceiver = oReceiver;
 	}
-	public int getoNumber() {
+	public String getoNumber() {
 		return oNumber;
 	}
-	public void setoNumber(int oNumber) {
+	public void setoNumber(String oNumber) {
 		this.oNumber = oNumber;
 	}
 	public String getoMessage() {
@@ -66,6 +70,34 @@ public class Order {
 	public void setoState(String oState) {
 		this.oState = oState;
 	}
+	public int getoZipcode() {
+		return oZipcode;
+	}
+	public void setoZipcode(int oZipcode) {
+		this.oZipcode = oZipcode;
+	}
+	public String getoAccountInfo() {
+		return oAccountInfo;
+	}
+	public void setoAccountInfo(String oAccountInfo) {
+		this.oAccountInfo = oAccountInfo;
+	}
+	public String getoDepositor() {
+		return oDepositor;
+	}
+	public void setoDepositor(String oDepositor) {
+		this.oDepositor = oDepositor;
+	}
+	@Override
+	public String toString() {
+		return "Order [orderNo=" + orderNo + ", uid=" + uid + ", oAddress=" + oAddress + ", oReceiver=" + oReceiver
+				+ ", oNumber=" + oNumber + ", oMessage=" + oMessage + ", oMethod=" + oMethod + ", oDate=" + oDate
+				+ ", oState=" + oState + ", oZipcode=" + oZipcode + ", oAccountInfo=" + oAccountInfo + ", oDepositor="
+				+ oDepositor + "]";
+	}
+	
+	
+	
 	
 	
 }

@@ -29,6 +29,7 @@
 
 <h6 class="mt-3">폼을 이용해서 파라미터 전달</h6><hr/>
 <form method="post" action="method3">
+<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 	<div class="form-group">
 		<label for="uid">아이디</label>
 		<input type="text" class="form-control" id="uid" name="uid">

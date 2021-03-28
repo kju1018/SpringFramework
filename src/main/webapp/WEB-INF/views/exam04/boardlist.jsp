@@ -25,7 +25,7 @@
 				<tr>
 					<td>${board.bno}</td>
 					<!--read?bno= {} bno는 파라미터 이름 Controller에서 바로 받음  -->
-					<td><a href="read?bno=${board.bno}">${board.btitle}</a></td>
+					<td><a href="read?bno=${board.bno}&btitle=${board.btitle}">${board.btitle}</a></td>
 					<td>${board.bwriter}</td>				
 					<td><fmt:formatDate value="${board.bdate}" pattern="yyyy-MM-dd"/></td>
 					<td>${board.bhitcount}</td>
