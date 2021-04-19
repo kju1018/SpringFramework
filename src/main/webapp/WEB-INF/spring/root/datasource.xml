@@ -4,7 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<!--DB 연결 설정 및 커넥션 풀 설정 -->
+	<!--DB 연결 설정 및 커넥션 풀 설정 javax.sql.DataSource 라는 인터페이스를
+	org.apache.commons.dbcp2.BasicDataSource로 구현-->
 	<!-- datasource파일은 커넥션 풀을 설정하는 파일 -->
 	
 	<!--설정 파일에서의 bean은 관리 객체  root에서 관리하는 객체-->
